@@ -1,0 +1,6 @@
+from circuit import Circuit
+sb64 = sbits.get_type(64)
+adder = Circuit('sklansky_64')
+a = sbitvec(sb64.get_input_from(0))
+b = sbitvec(sb64.get_input_from(0))
+print_ln('%s', adder(a, b).elements()[0].reveal())

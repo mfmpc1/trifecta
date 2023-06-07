@@ -1,0 +1,10 @@
+from circuit import Circuit
+sb28 = sbits.get_type(28)
+aes = Circuit('2f_aes_128')
+# aes = Circuit('3f_aes_192')
+# aes = Circuit('4f_aes_256')
+# determines the number of batches e.g. n = 100 will run 100 batches in parallel
+n = 1
+key = sb28(1)
+a = sbitvec([key]*n)
+aes(a)
